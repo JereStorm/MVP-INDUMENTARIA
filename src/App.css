@@ -6,3 +6,13 @@
   flex-direction: row;
   gap: 50px;
 }
+.nav-item a {
+  transition: text-decoration 0.3s ease;
+}
+.nav-item a:hover {
+  text-decoration: underline;
+}
+.title-header {
+  font-size: 25px;
+  font-family: "Alfa Slab One", cursive;
+}
