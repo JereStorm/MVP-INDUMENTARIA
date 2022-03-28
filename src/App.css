@@ -1,5 +1,5 @@
 .header {
-  height: 150px;
+  height: 110px;
 }
 .navegator {
   display: flex;
@@ -13,6 +13,9 @@
   text-decoration: underline;
 }
 .title-header {
-  font-size: 25px;
-  font-family: "Alfa Slab One", cursive;
+  font-size: 60px;
+  font-family: "Bebas Neue", cursive;
+}
+.img-home {
+  width: 80%;
 }
