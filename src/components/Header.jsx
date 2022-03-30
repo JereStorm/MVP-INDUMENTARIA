@@ -119,7 +119,7 @@ const Header = () => {
           >
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                MVP
+                MENU
               </h5>
               <button
                 type="button"
@@ -140,7 +140,7 @@ const Header = () => {
                   Search
                 </button>
               </form>
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-3">
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">
                     Home
@@ -178,12 +178,12 @@ const Header = () => {
                   >
                     <li>
                       <a className="dropdown-item" href="#">
-                        Action
+                        Accesorios
                       </a>
                     </li>
                     <li>
                       <a className="dropdown-item" href="#">
-                        Another action
+                        Remeras
                       </a>
                     </li>
                     <li>
@@ -191,7 +191,7 @@ const Header = () => {
                     </li>
                     <li>
                       <a className="dropdown-item" href="#">
-                        Something else here
+                        Ofertas
                       </a>
                     </li>
                   </ul>
