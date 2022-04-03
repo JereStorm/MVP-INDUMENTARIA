@@ -101,18 +101,21 @@ const Header = () => {
               MVP INDUMENTARIA DEPORTIVA
             </a>
           </h1>
+          <div className="gap-5">
+            <i class="bi bi-person-square btn btn-dark me-5"></i>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div
-            class="offcanvas offcanvas-end collapsed navbar-collapsed"
+            class="offcanvas offcanvas-end"
             tabindex="-1"
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
