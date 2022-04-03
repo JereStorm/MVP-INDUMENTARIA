@@ -15,6 +15,7 @@
 .title-header {
   font-size: 40px;
   font-family: "Bebas Neue", cursive;
+  font-style: italic;
 }
 .img-home {
   width: 80%;
@@ -30,6 +31,7 @@
 @media only screen and (min-width: 748px) {
   .title-header {
     font-size: 60px;
+    
   }
   .section-title {
     font-size: 80px;
