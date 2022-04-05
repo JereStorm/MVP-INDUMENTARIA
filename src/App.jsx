@@ -1,12 +1,14 @@
 import "./App.css";
+import AuthProvider from "./auth/AuthProvider";
 import Header from "./components/Header";
 import AppRouter from "./routers/AppRouter";
 
 function App() {
   return (
     <div>
-      <Header></Header>
-      <AppRouter />
+      <AuthProvider>
+        <AppRouter />
+      </AuthProvider>
     </div>
   );
 }

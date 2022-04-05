@@ -1,7 +1,6 @@
 import React from "react";
-
-import { Nav, Navbar, NavbarBrand, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 const Header = () => {
   return (
@@ -23,31 +22,43 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ms-3">
             <NavDropdown title="Admin" className="text-info">
-              <NavDropdown.Item href="/admin/users">Usuarios</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/admin/users">
+                Usuarios
+              </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link as={NavLink} to="/">
+              Home
+            </Nav.Link>
             <NavDropdown title="Productos">
-              <NavDropdown.Item href="/products?remeras">
+              <NavDropdown.Item as={NavLink} to="/products?remeras">
                 Remeras
               </NavDropdown.Item>
-              <NavDropdown.Item href="/products?pantalones">
+              <NavDropdown.Item as={NavLink} to="/products?pantalones">
                 Pantalones
               </NavDropdown.Item>
-              <NavDropdown.Item href="/products/camperas">
+              <NavDropdown.Item as={NavLink} to="/products/camperas">
                 Camperas
               </NavDropdown.Item>
-              <NavDropdown.Item href="/products/buzos">Buzos</NavDropdown.Item>
-              <NavDropdown.Item href="/products/zapatillas">
+              <NavDropdown.Item as={NavLink} to="/products/buzos">
+                Buzos
+              </NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/products/zapatillas">
                 Zapatillas
               </NavDropdown.Item>
               <NavDropdown.Item>Accesorios</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav className="me-3">
-            <Nav.Link href="/login">Iniciar Sesion</Nav.Link>
-            <Nav.Link href="/register">Registrarse</Nav.Link>
-            <Nav.Link href="/account">Mi Cuenta</Nav.Link>
+            <Nav.Link as={NavLink} to="/login">
+              Iniciar Sesion
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/register">
+              Registrarse
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/account">
+              Mi Cuenta
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
