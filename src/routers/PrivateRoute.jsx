@@ -1,14 +1,15 @@
 import UseAuth from "../auth/UseAuth";
 import { Navigate } from "react-router-dom";
+import routes from "../helpers/Routes";
 
 const PrivateRoute = ({ hasRole: role, children }) => {
-  const { user } = UseAuth();
+  const { hasRole, isLogged } = UseAuth();
   //If exist role...
-  if (role && user.role !== role) {
-    return <Navigate to="/" />;
+  if (role && !hasRole(role)) {
+    return <Navigate to={routes.home} />;
   }
 
-  if (!user) return <Navigate to="/login" />;
+  if (!isLogged()) return <Navigate to={routes.login} />;
   return children;
 };
 

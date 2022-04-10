@@ -1,11 +1,13 @@
 import { Navigate, Route } from "react-router-dom";
 import UseAuth from "../auth/UseAuth";
+import routes from "../helpers/Routes";
 
-export default function PublicRoute(props) {
+export default function PublicRoute({ children }) {
   // const user = null;
 
-  const { user } = UseAuth();
+  const { isLogged } = UseAuth();
+  console.log(isLogged());
 
-  if (user) return <Navigate to="/" />;
-  return <Route {...props} />;
+  if (isLogged()) return <Navigate to={routes.home} />;
+  return children;
 }
