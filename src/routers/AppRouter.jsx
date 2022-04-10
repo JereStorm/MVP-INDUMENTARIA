@@ -1,7 +1,10 @@
 import React from "react";
+
 // ROUTER
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "../components/Layout";
+import Roles from "../helpers/Roles";
+import routes from "../helpers/Routes";
 // PAGES
 import AccountPage from "../sections/AccountPage";
 import UsersPage from "../sections/admin/UsersPage";
@@ -16,16 +19,18 @@ import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 
 export default function AppRouter() {
+  // GLOBALES
+
   return (
     <Router>
       <Layout>
         <Routes>
           {/* HOME */}
-          <Route exact path="/" element={<HomePage />} />
+          <Route exact path={routes.home} element={<HomePage />} />
           {/* LOGIN */}
           <Route
             exact
-            path="/login"
+            path={routes.login}
             element={
               <PublicRoute>
                 <LoginPage />
@@ -34,7 +39,7 @@ export default function AppRouter() {
           />
           <Route
             exact
-            path="/register"
+            path={routes.register}
             element={
               <PublicRoute>
                 <RegisterPage />
@@ -43,7 +48,7 @@ export default function AppRouter() {
           />
           <Route
             exact
-            path="/account"
+            path={routes.account}
             element={
               <PrivateRoute>
                 <AccountPage />
@@ -52,19 +57,18 @@ export default function AppRouter() {
           />
 
           {/* PRODUCTOS */}
-          <Route exact path="/products" element={<ProductsPage />} />
-          <Route exact path="/product/:productId" element={<ProductPage />} />
+          <Route exact path={routes.products} element={<ProductsPage />} />
+          <Route exact path={routes.product()} element={<ProductPage />} />
           {/* ADMIN */}
           <Route
             exact
-            path="/admin/users"
+            path={routes.admin}
             element={
-              <PrivateRoute>
+              <PrivateRoute hasRole={Roles.admin}>
                 <UsersPage />
               </PrivateRoute>
             }
           />
-          <Route exact path="/admin/users" element={<UsersPage />} />
 
           {/* ERRORPAGE */}
           <Route path="*" element={<NotFoundPage />} />
