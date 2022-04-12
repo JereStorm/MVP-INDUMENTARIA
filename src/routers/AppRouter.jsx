@@ -18,13 +18,9 @@ import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 
 export default function AppRouter() {
-  // GLOBALES
-
   return (
     <Routes>
-      {/* HOME */}
       <Route exact path={routes.home} element={<HomePage />} />
-      {/* LOGIN */}
       <Route
         exact
         path={routes.login}
@@ -53,10 +49,8 @@ export default function AppRouter() {
         }
       />
 
-      {/* PRODUCTOS */}
       <Route exact path={routes.products} element={<ProductsPage />} />
       <Route exact path={routes.product()} element={<ProductPage />} />
-      {/* ADMIN */}
       <Route
         exact
         path={routes.admin}
@@ -67,7 +61,6 @@ export default function AppRouter() {
         }
       />
 
-      {/* ERRORPAGE */}
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
