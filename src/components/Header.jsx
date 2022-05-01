@@ -16,9 +16,10 @@ const Header = () => {
         variant="dark"
         bg="dark"
         className="text-light"
+        sticky="top"
       >
         <Navbar.Brand>
-          <h1 className="title-header text-uppercase font-italic m-3">
+          <h1 className="title-header text-uppercase font-italic m-1">
             mvp indumentaria deportiva
           </h1>
         </Navbar.Brand>

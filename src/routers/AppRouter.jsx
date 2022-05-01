@@ -50,7 +50,7 @@ export default function AppRouter() {
       />
 
       <Route exact path={routes.products} element={<ProductsPage />} />
-      <Route exact path={routes.product()} element={<ProductPage />} />
+      <Route exact path={routes.product(1)} element={<ProductPage />} />
       <Route
         exact
         path={routes.admin}
